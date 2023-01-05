@@ -4,7 +4,22 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            List<string> fish = new()
+            {
+                "Black Bass",
+                "Cod",
+                "Chilean Black Sea Bass",
+                "Tuna",
+                "Goldfish"
+            };
+
+            IEnumerable<string> sortList = fish.OrderBy(x => x.Length);
+
+            foreach (var item in sortList)
+            {
+                Console.WriteLine(item);
+            }
+
         }
     }
 }
